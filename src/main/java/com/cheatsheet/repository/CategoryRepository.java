@@ -1,6 +1,8 @@
 package com.cheatsheet.repository;
 
 import com.cheatsheet.model.Category;
+
+import java.awt.desktop.SystemEventListener;
 import java.sql.*;
 import java.util.*;
 
@@ -43,7 +45,12 @@ public class CategoryRepository {
             c.setCategoryId(rs.getInt("category_id"));
             c.setName(rs.getString("name"));
             list.add(c);
+           
         }
         return list;
     }
+
+   
 }
+    
+
