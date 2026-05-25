@@ -34,23 +34,19 @@ public class CategoryRepository {
         stmt.setInt(1, id);
         stmt.executeUpdate();
     }
-
-    public List<Category> findAll() throws SQLException {
-        List<Category> list = new ArrayList<>();
-        String sql = "SELECT * FROM categories";
-        Statement stmt = conn.createStatement();
-        ResultSet rs = stmt.executeQuery(sql);
-        while (rs.next()) {
-            Category c = new Category();
-            c.setCategoryId(rs.getInt("category_id"));
-            c.setName(rs.getString("name"));
-            list.add(c);
-           
-        }
-        return list;
-    }
-
-   
 }
+/*
+ * public List<Category> findAll() throws SQLException { List<Category> list =
+ * new ArrayList<>(); String sql = "SELECT * FROM categories"; Statement stmt =
+ * conn.createStatement(); ResultSet rs = stmt.executeQuery(sql); while
+ * (rs.next()) { Category c = new Category();
+ * c.setCategoryId(rs.getInt("category_id")); c.setName(rs.getString("name"));
+ * list.add(c);
+ * 
+ * } return list; }
+ * 
+ * 
+ * }
+ */
     
 
